@@ -8,6 +8,7 @@ declare module '@mui/material' {
 			lightGray: string
 			lightBlue: string
 			dirtyYellow: string
+			mint: string
 		}
 	}
 }
