@@ -1,6 +1,6 @@
 export interface IAuthSlice {
 	isAuth: boolean
-	isOpenModal: boolean | any
+	isOpenModal: boolean
 	incorrectDataTry: boolean
 }
 export interface ITryLoginAction {

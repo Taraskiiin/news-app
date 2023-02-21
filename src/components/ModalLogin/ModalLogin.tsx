@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 import Modal from '@mui/material/Modal'
+import IconButton from '@mui/material/IconButton'
 import ClearIcon from '@mui/icons-material/Clear'
 
-import Button from '../UI/Button'
+import CustomButton from '../UI/Button'
 import { useAppSelector, useAppDispatch } from '../../redux/hooks'
 import { close, tryLogin } from '../../redux/authSlice'
 import ModalSuccessScreen from './ModalSuccessScreen'
@@ -24,14 +25,21 @@ export const modalStyles = {
 	alightItems: 'center',
 	outline: 'none',
 	borderRadius: '16px',
-	padding: '5px 10px 20px',
+	padding: '5px 10px',
 	gap: '10px',
 }
 
 const buttonContainerStyles = {
 	position: 'absolute',
-	top: '5px',
-	right: '0',
+	top: '0',
+	right: '10px',
+	opacity: '0.7',
+	'&:hover': {
+		opacity: '0.8',
+	},
+	'&:active': {
+		opacity: '1',
+	},
 }
 
 const ModalLogin = () => {
@@ -94,14 +102,16 @@ const ModalLogin = () => {
 								}
 								sx={{ marginBottom: '10px' }}
 							/>
-							<Box sx={buttonContainerStyles}>
-								<Button
-									icon={<ClearIcon />}
-									color={'customColors.DarkGray'}
-									click={handleClose}
-								/>
-							</Box>
-							<Button
+							<IconButton
+								size="large"
+								edge="end"
+								color="primary"
+								aria-label="menu"
+								sx={buttonContainerStyles}
+								onClick={handleClose}>
+								<ClearIcon />
+							</IconButton>
+							<CustomButton
 								color={'customColors.DarkGray'}
 								label={'Submit'}
 								click={handleSubmit}

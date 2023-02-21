@@ -19,6 +19,9 @@ const authSlice = createSlice({
 			state.isOpenModal = false
 			state.incorrectDataTry = false
 		},
+		logout(state) {
+			state.isAuth = false
+		},
 		tryLogin(state, action: PayloadAction<ITryLoginAction>) {
 			if (
 				action.payload.login === process.env.REACT_APP_API_LOGIN &&
@@ -34,5 +37,5 @@ const authSlice = createSlice({
 	},
 })
 
-export const { open, close, tryLogin } = authSlice.actions
+export const { open, close, logout, tryLogin } = authSlice.actions
 export default authSlice
