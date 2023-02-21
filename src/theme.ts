@@ -15,6 +15,7 @@ const theme = createTheme({
 			lightBlue: '#BACBDB',
 			dirtyYellow: '#CEAD6D',
 			mint: '#AAF0D1',
+			salmon: '#FF5733',
 		},
 	},
 })

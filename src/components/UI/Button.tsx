@@ -10,12 +10,18 @@ type TButton = {
 
 const buttonStyles = {
 	display: 'flex',
+	margin: '0 auto',
 	alignItems: 'center',
 	justifyContent: 'center',
 	cursor: 'pointer',
 	opacity: '0.6',
 	background: 'inherit',
 	width: 'min-content',
+	fontSize: '18px',
+	lineHeigth: '22px',
+	fontWeigth: '700',
+	letterSpacing: '0.7px',
+	textTransform: 'uppercase',
 	border: 'none',
 	'&:hover': {
 		opacity: '0.8',

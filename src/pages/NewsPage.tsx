@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import ModalLogin from '../components/ModalLogin/ModalLogin'
 
 const NewsPage = () => {
 	return (
 		<div>
-			<Link to="/">
-				<h3>THIS PAGE DOES NOT EXIST. PLEASE TAP HERE</h3>
-			</Link>
+			<ModalLogin />
 		</div>
 	)
 }

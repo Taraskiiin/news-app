@@ -8,7 +8,6 @@ import HomePage from './pages/HomePage'
 import NewsPage from './pages/NewsPage'
 import ProfilePage from './pages/ProfilePage'
 import NotFoundPage from './pages/NotFoundPage'
-import AuthorizationPage from './pages/AuthorizationPage'
 
 function App() {
 	return (
@@ -17,7 +16,6 @@ function App() {
 				<Route path="/" element={<HomePage />} />
 				<Route path="/news" element={<NewsPage />} />
 				<Route path="/profile" element={<ProfilePage />} />
-				<Route path="/authorization" element={<AuthorizationPage />} />
 				<Route path="*" element={<NotFoundPage />} />
 			</Routes>
 		</ThemeProvider>
