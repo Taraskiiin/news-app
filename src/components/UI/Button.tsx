@@ -10,7 +10,7 @@ type TButton = {
 
 const buttonStyles = {
 	display: 'flex',
-	margin: '0 auto',
+	margin: '0',
 	alignItems: 'center',
 	justifyContent: 'center',
 	cursor: 'pointer',
@@ -22,7 +22,12 @@ const buttonStyles = {
 	fontWeigth: '700',
 	letterSpacing: '0.7px',
 	textTransform: 'uppercase',
-	border: 'none',
+	border: '1px solid #686461',
+	borderRadius: '8px',
+	padding: '4px 16px',
+	whiteSpace: 'nowrap',
+	bgcolor: 'customColors.lightBlue',
+	color: 'customColors.darkBrown',
 	'&:hover': {
 		opacity: '0.8',
 	},
@@ -31,7 +36,7 @@ const buttonStyles = {
 	},
 }
 
-export default function Btn({ icon, label, color, click }: TButton) {
+const CustomButton = ({ icon, label, color, click }: TButton) => {
 	return (
 		<Box
 			component="button"
@@ -42,3 +47,5 @@ export default function Btn({ icon, label, color, click }: TButton) {
 		</Box>
 	)
 }
+
+export default CustomButton
