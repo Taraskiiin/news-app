@@ -1,6 +1,7 @@
 import React from 'react'
-import { ThemeProvider } from '@mui/material'
+import { Box, ThemeProvider } from '@mui/material'
 import { Routes, Route } from 'react-router-dom'
+import CssBaseline from '@mui/material/CssBaseline'
 
 import theme from './theme'
 
@@ -9,15 +10,30 @@ import NewsPage from './pages/NewsPage'
 import ProfilePage from './pages/ProfilePage'
 import NotFoundPage from './pages/NotFoundPage'
 
+import { Header } from './components/Header'
+import { ModalLogin } from './components/ModalLogin'
+
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
-			<Routes>
-				<Route path="/" element={<HomePage />} />
-				<Route path="/news" element={<NewsPage />} />
-				<Route path="/profile" element={<ProfilePage />} />
-				<Route path="*" element={<NotFoundPage />} />
-			</Routes>
+			<CssBaseline />
+			<Box
+				sx={{
+					boxSizing: 'border-box',
+					width: '100%',
+					heigth: '100%',
+					padding: '70px 0 0 0',
+					margin: '0',
+				}}>
+				<Header />
+				<ModalLogin />
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/news" element={<NewsPage />} />
+					<Route path="/profile" element={<ProfilePage />} />
+					<Route path="*" element={<NotFoundPage />} />
+				</Routes>
+			</Box>
 		</ThemeProvider>
 	)
 }
