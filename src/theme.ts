@@ -14,6 +14,8 @@ const theme = createTheme({
 			lightGray: '#E1DCE0',
 			lightBlue: '#BACBDB',
 			dirtyYellow: '#CEAD6D',
+			mint: '#AAF0D1',
+			salmon: '#FF5733',
 		},
 	},
 })
